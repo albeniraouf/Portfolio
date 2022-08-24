@@ -1,0 +1,72 @@
+.section {
+  padding: 70px 0;
+}
+
+.social-fa-icon {
+  border: none !important;
+  border-radius: 100% !important;
+  cursor: pointer !important;
+  background-color: var(--darkest-color) !important;
+  color: white !important;
+  font-size: 2.5rem !important;
+  width: 3.5rem !important;
+  padding: 0rem !important;
+  min-width: 3.5rem !important;
+  height: 3.5rem !important;
+}
+
+.profile-image a {
+  position: relative !important;
+}
+
+.profile-image img {
+  position: relative !important;
+  border-radius: 5%;
+  height: 22rem !important;
+  width: 22rem !important;
+  background-color: #2005 !important;
+  padding: 0 3.5rem !important;
+  margin: 3.5rem 0 0 0 !important;
+  z-index: 9999 !important;
+  -webkit-transition: all .4s ease-out !important;
+  transition: all .3s ease-out !important;
+}
+
+
+.profile-page .page-header {
+  min-height: 100vh;
+}
+
+.profile-page .button-container {
+  text-align: center;
+}
+
+.button-container .btn-default {
+  margin-right: 8px;
+}
+
+
+.page-header {
+  height: 100vh;
+  max-height: 1050px;
+  padding: 0;
+  color: var(--lightest-color);
+  position: relative;
+}
+
+.page-header .page-header-image {
+  position: absolute;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+.page-header .container {
+  height: 100%;
+  z-index: 1;
+  text-align: center;
+  position: relative;
+}

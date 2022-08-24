@@ -1,0 +1,80 @@
+<div class="section" id="contact">
+  <div class="cc-contact-information" >
+    <div class="container">
+      <div class="cc-contact">
+        <div class="row">
+          <div class="col-md-9">
+            <div class="card mb-0">
+              <div class="h4 text-center title">Contact Me</div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <div>
+                      <div class="p pb-3">
+                        <strong>Feel free to contact me </strong>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <input  class="form-control" type="text" #name placeholder="Name"
+                              [(ngModel)]="model.name" [ngModelOptions]="{standalone: true}"
+                              [ngClass]="{ 'is-invalid':  !name.checkValidity() }" required />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-container">
+                            <input  class="form-control" type="text" #subject placeholder="Subject"
+                              [(ngModel)]="model.subject" [ngModelOptions]="{standalone: true}"
+                              [ngClass]="{ 'is-invalid': !subject.checkValidity() }" required />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="input-group">
+                            <input  class="form-control" type="text" #email placeholder="E-mail"
+                              [(ngModel)]="model.email" [ngModelOptions]="{standalone: true}"
+                              [ngClass]="{ 'is-invalid': !email.checkValidity() }"
+                              pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" required />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col">
+                          <div class="form-group">
+                            <textarea class="form-control" #message placeholder="Your Message"
+                              [(ngModel)]="model.message" [ngModelOptions]="{standalone: true}"
+                              [ngClass]="{ 'is-invalid': !message.checkValidity() }" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <button class="btn submit-btn" type="submit" (click)="onSubmit()"> Send</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                      <p class="mb-0">
+                          <strong>Phones: </strong>
+                      </p>
+                      <p class="py-0 my-0" *ngFor="let phone of phones">{{phone}}</p>
+                      <p class="mt-4 mb-0">
+                          <strong>Emails: </strong>
+                      </p>
+                      <p class="py-0 my-0" *ngFor="let email of emails">{{email}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<footer class="footer">
+    <div class="container text-center">
+        <a *ngFor="let account of about.accounts" class="colored-{{account.website.toLowerCase()}} btn btn-link" [href]="account.url" target="_blank">
+            <fa-icon [icon]="account.icon" style="font-size: 1.5rem;"></fa-icon>
+        </a>
+    </div>
+    <div class="text-center rights">
+        <p>&copy; All rights reserved.</p>
+    </div>
+</footer>

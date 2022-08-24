@@ -1,0 +1,24 @@
+<div class="section" id="education">
+    <div class="container">
+        <div class="h4 text-center mb-4 title">Education</div>
+        <div class="card" *ngFor="let education of educations">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card-body education-header">
+                        <h3>{{education.title}}</h3>
+                        <p>{{education.startDate | date: 'MMM, yyyy'}} - {{education?.endDate? (education.endDate | date: 'MMM, yyyy'): 'Present'}}</p>
+                    </div>
+                </div>
+                <div class="col-md-9 px-md-0">
+                    <div class="card-body education-content">
+                        <h4>{{education.description}}</h4>
+                        <h5>{{education.college}}</h5>
+                        <ul>
+                            <li *ngFor="let achievement of education.achievements">{{achievement}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

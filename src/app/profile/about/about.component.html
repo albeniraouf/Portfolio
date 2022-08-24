@@ -1,0 +1,54 @@
+<div class="section" id="about">
+    <div class="container">
+        <div class="card">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="card-body">
+                        <div class="h4 mt-0 title">About Me</div>
+                       <div [innerHTML]="about.whoAmI"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="card-body">
+                        <div class="h4 mt-0 title">Basic Information</div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <strong class="text-uppercase">Date of Birth:</strong>
+                            </div>
+                            <div class="col-sm-8">{{about.birthDate | date:'MMMM dd, yyyy'}}</div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-4">
+                                <strong class="text-uppercase">Emails:</strong>
+                            </div>
+                            <div class="col-sm-8">
+                                <span *ngFor="let email of emails">{{email}}<br></span>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-4">
+                                <strong class="text-uppercase">Phone Numbers:</strong>
+                            </div>
+                            <div class="col-sm-8">
+                                <span *ngFor="let phone of phones">{{phone}}<br></span>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-4">
+                                <strong class="text-uppercase">Address:</strong>
+                            </div>
+                            <div class="col-sm-8">{{about.address}}</div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-4">
+                                <strong class="text-uppercase">Languages:</strong>
+                            </div>
+                            <div class="col-sm-8">
+                                <span *ngFor="let lang of about.languages">{{lang}}<br></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

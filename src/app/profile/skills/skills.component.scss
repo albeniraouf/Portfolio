@@ -1,0 +1,58 @@
+.progress-container {
+    position: relative;
+}
+
+.progress-container+.progress-container,
+.progress-container~.progress-container {
+    margin-top: 15px;
+}
+
+.progress-container .progress-badge {
+    color: var(--lightest-color) !important;
+    font-size: 1rem;
+}
+
+.progress-container .progress .progress-bar {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: var(--light-color);
+}
+
+.progress-container .progress .progress-value {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    color: var(--lightest-color);
+    font-size: 0.8571em;
+}
+
+.progress-container .progress {
+    background: var(--lightest-color);
+}
+
+.progress-container {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.progress-container .progress-bar {
+    height: 5px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: -webkit-transform 2s ease-in-out;
+    transition: -webkit-transform 2s ease-in-out;
+    transition: transform 2s ease-in-out;
+    transition: transform 2s ease-in-out, -webkit-transform 2s ease-in-out;
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+
+.progress-container .progress {
+    height: 5px;
+    font-size: 18px;
+}
+
+.progress-container .aos-animate {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}

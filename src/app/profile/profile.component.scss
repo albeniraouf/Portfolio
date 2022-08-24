@@ -1,0 +1,14 @@
+.page-content {
+    background-color: transparent !important;
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px) brightness(0.25)
+}

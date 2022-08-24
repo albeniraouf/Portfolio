@@ -1,0 +1,21 @@
+.navbar {
+    background-color: var(--navbar-scroll) !important;
+    transition: background-color 1s ease !important;
+    color: var(--navbar-scroll-text) !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 2000 !important;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    min-height: 53px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+    vertical-align: middle;
+    color: var(--lightest-color);
+}
