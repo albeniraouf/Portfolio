@@ -1,29 +1,27 @@
 .bg-surface {
-    &-a {
-        background-color: var(--surface-a) !important;
-    }
+  &-a {
+    background-color: var(--surface-a) !important;
+  }
 
-    &-b {
-        background-color: var(--surface-b) !important;
-    }
+  &-b {
+    background-color: var(--surface-b) !important;
+  }
 
-    &-d {
-        background-color: var(--surface-d) !important;
-    }
+  &-d {
+    background-color: var(--surface-d) !important;
+  }
 }
 
 .card-shadow {
-    box-shadow: 0 0 12px 2px var(--surface-d);
+  box-shadow: 0 0 12px 2px var(--surface-d);
 }
 
 .float {
-    &-right {
-        float: right;
-    }
+  &-right {
+    float: right;
+  }
 
-    &-left {
-        float: left;
-    }
+  &-left {
+    float: left;
+  }
 }
-
-

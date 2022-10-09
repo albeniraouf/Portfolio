@@ -1,14 +1,14 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
-import { Observable, timer } from "rxjs";
-import { map, shareReplay } from "rxjs/operators";
+import { Observable, timer } from 'rxjs';
+import { map, shareReplay } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root',
 })
 export class ClockService {
   private _time$: Observable<Date> = timer(0, 1000).pipe(
-    map(tick => new Date()),
+    map((tick) => new Date()),
     shareReplay(1)
   );
 
@@ -17,4 +17,4 @@ export class ClockService {
   }
 
   constructor() {}
-}  
+}

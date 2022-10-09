@@ -8,8 +8,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { CardModule } from 'primeng/card';
 import { TimelineModule } from 'primeng/timeline';
-import { ChipModule } from 'primeng/chip'
-import { ProgressBarModule } from 'primeng/progressbar'
+import { ChipModule } from 'primeng/chip';
+import { ProgressBarModule } from 'primeng/progressbar';
 import { InputTextModule } from 'primeng/inputtext';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
@@ -17,9 +17,7 @@ import { DividerModule } from 'primeng/divider';
 import { MenubarModule } from 'primeng/menubar';
 
 @NgModule({
-  declarations: [
-    ProfileComponent,
-  ],
+  declarations: [ProfileComponent],
   imports: [
     CommonModule,
     CardModule,
@@ -35,7 +33,7 @@ import { MenubarModule } from 'primeng/menubar';
     DividerModule,
     MenubarModule,
     MenubarModule,
-    PipesModule
-  ]
+    PipesModule,
+  ],
 })
-export class ProfileModule { }
+export class ProfileModule {}

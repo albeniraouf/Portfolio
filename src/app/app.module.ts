@@ -8,16 +8,14 @@ import { PipesModule } from './pipes/pipes.module';
 import { ProfileModule } from './profile/profile.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ProfileModule,
     HttpClientModule,
-    PipesModule
+    PipesModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
