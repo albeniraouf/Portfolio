@@ -1,46 +1,29 @@
-// :root {
-//   --lightest-color: #c4c4c4;
-//   --light-color: #AD1D45;
-//   --normal-color: #83142C;
-//   --darkest-color: #44000D;
-//   --font-family: -apple-system, BlinkMacSystemFont, "Poppins", Roboto, Helvetica,
-//     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-// }
+.bg-surface {
+    &-a {
+        background-color: var(--surface-a) !important;
+    }
 
-// body {
-//   --navbar-scroll: transparent;
-//   --navbar-scroll-text: white;
-//   background-color: var(--normal-color);
-//   color: var(--lightest-color);
-//   font-size: 1rem;
-//   font-family: var(--font-family);
-// }
+    &-b {
+        background-color: var(--surface-b) !important;
+    }
 
-// .title{
-//   font-weight: 700;
-//   color: var(--lightest-color)
-// }
+    &-d {
+        background-color: var(--surface-d) !important;
+    }
+}
 
-// .card {
-//   border: 0;
-//   border-radius: 0.1875rem;
-//   display: inline-block;
-//   position: relative;
-//   overflow: hidden;
-//   width: 100%;
-//   margin-bottom: 20px;
-//   -webkit-box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-//   box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-//   background-color: var(--darkest-color);
-// }
+.card-shadow {
+    box-shadow: 0 0 12px 2px var(--surface-d);
+}
 
-// .card-body {
-//   background-color: var(--darkest-color);
-// }
+.float {
+    &-right {
+        float: right;
+    }
 
-// .section {
-//   padding: 70px 0;
-//   padding-bottom: 0;
-//   position: relative;
-// }
+    &-left {
+        float: left;
+    }
+}
+
 

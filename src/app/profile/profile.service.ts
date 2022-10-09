@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { firstValueFrom, Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
-import Profile from './profile.models';
+import Profile, { Experience } from './profile.models';
 import { profile } from './profile.data';
 
 @Injectable({

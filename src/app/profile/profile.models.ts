@@ -8,13 +8,15 @@ export interface Company {
     name: string;
     link: string;
     description: string;
+    image?: string;
+    imageStyle?: string;
+    showName: boolean;
 }
 export interface Experience {
     company: Company;
     title: string;
     startDate: Date;
     endDate?: Date;
-    description: string;
     coreFunctionalities: string[];
     technologiesAndLanguages: string[];
 }
