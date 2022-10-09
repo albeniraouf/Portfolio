@@ -47,27 +47,41 @@
 }
 
 .bitmoji {
-    width: 25rem;
-    height: 25rem;
-    object-fit: cover;
+    width: 50%;
+    // height: 25rem;
+    // object-fit: cover;
     
-    &-emoji {
-        object-position: 0px -6rem;
-        margin-bottom: -8rem;
+    // &-emoji {
+    //     object-position: 0px -6rem;
+    //     margin-bottom: -8rem;
+    // }
+    @media (min-width: 768px) {
+        &-navbar {
+            margin-top: -2rem;
+            margin-bottom: -1rem;
+        }
     }
     &-navbar {
         width: 100%;
-        margin-top: -2rem;
-        margin-bottom: -1rem;
         cursor: pointer;
     }
 
-    &-laptop {
-        object-position: 0px -2rem;
-        margin-bottom: -4rem;
-    }
+    // &-laptop {
+    //     object-position: 0px -2rem;
+    //     margin-bottom: -4rem;
+    // }
 }
 
 .font-black {
     color: black !important;
+}
+
+fa-icon {
+    margin-left: 0.25rem !important;
+    margin-right: 0.25rem !important;
+}
+
+.tel-link, .mailto-link, .map-link {
+    text-decoration: none;
+    color: var(--text-color)
 }

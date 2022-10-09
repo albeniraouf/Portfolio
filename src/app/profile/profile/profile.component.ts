@@ -1,12 +1,12 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { Card } from 'primeng/card';
 import { BehaviorSubject } from 'rxjs';
 import { ClockService } from 'src/app/services/clock.service';
 import { compareBy } from 'src/app/utils/compare';
-import Profile, { Experience } from '../profile.models';
 import { ProfileService } from '../profile.service';
-
+import { faBirthdayCake, faEnvelope, faGraduationCap, faIdCard, faLanguage, faLaptop, faMap, faMobilePhone, faPaperPlane, faPhone, faTrophy, faUser} from '@fortawesome/free-solid-svg-icons'
+import Profile from '../profile.models';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -36,13 +36,27 @@ export class ProfileComponent implements OnInit {
   //theme
   dark = new BehaviorSubject(true);
 
+  // faIcons
+  faGraduationCap = faGraduationCap;
+  faLaptop = faLaptop;
+  faIdCard = faIdCard;
+  faUser = faUser;
+  faTrophy = faTrophy;
+  faPhone = faPhone;
+  faMobilePhone = faMobilePhone;
+  faEnvelope = faEnvelope;
+  faBirthdayCake = faBirthdayCake;
+  faMap = faMap;
+  faLanguage = faLanguage;
+  faPaperPlane = faPaperPlane;
+  
   constructor(
     private profileService: ProfileService,
     clockService: ClockService
   ) { 
     clockService.time.subscribe(time => {
       const curHr = time.getHours()
-      if (curHr < 6 || curHr > 18) 
+      if (curHr < 6 || curHr >= 18) 
         this.dark.next(true);
       else
         this.dark.next(false);

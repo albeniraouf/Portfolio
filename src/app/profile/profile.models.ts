@@ -27,6 +27,7 @@ export interface Education {
     description: string;
     college: string;
     achievements: string[];
+    icon?: IconDefinition;
 }
 export interface Account {
     url: string;
@@ -37,8 +38,9 @@ export interface About {
     name: string;
     job: string;
     accounts: Account[];
-    birthDate: Date,
+    birthDate: Date;
     address: string;
+    addressOnMap: string;
     languages: string[];
     whoAmI: string;
 }

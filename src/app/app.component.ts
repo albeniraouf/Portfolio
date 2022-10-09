@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   constructor(clockService: ClockService) {
     clockService.time.subscribe(time => {
       const curHr = time.getHours()
-      if (curHr < 6 || curHr > 18)
+      if (curHr < 6 || curHr >= 18)
         this.dark.next(true);
       else
         this.dark.next(false);

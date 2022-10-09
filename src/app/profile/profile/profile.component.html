@@ -1,7 +1,8 @@
 <div class="fixed top-0 left-0 right-0 z-10000">
     <p-menubar [model]="navbarItems" appendTo="body">
         <ng-template pTemplate="start">
-            <img class="bitmoji-navbar" (click)="scroll(intro)" src="assets/bitmojies/smile_looking_right.png" alt="Image" />
+            <img class="bitmoji-navbar" (click)="scroll(intro)" src="assets/bitmojies/smile_looking_right.png"
+                alt="Image" />
         </ng-template>
     </p-menubar>
 </div>
@@ -12,9 +13,10 @@
     <h2 class="my-0 {{!(dark|async)? 'font-black':'p-text-color'}}">{{profile.about.name}}</h2>
     <h4 class="mt-0 {{!(dark|async)? 'font-black':'p-text-color'}}">{{profile.about.job}}</h4>
     <div class="button-container">
-        <a *ngFor="let account of profile.about.accounts" class="btn btn-default btn-round btn-lg btn-icon {{!(dark|async)? 'font-black':'p-text-color'}}"
+        <a *ngFor="let account of profile.about.accounts"
+            class="btn btn-default btn-round btn-lg btn-icon {{!(dark|async)? 'font-black':'p-text-color'}}"
             [href]="account.url" target="_blank" rel="tooltip" [title]="'Follow me on '+account.website">
-            <fa-icon [icon]="account.icon" class="text-4xl mx-1"></fa-icon>
+            <fa-icon [icon]="account.icon" class="text-4xl "></fa-icon>
         </a>
     </div>
 </div>
@@ -29,7 +31,9 @@
     </ng-template>
     <div class="grid">
         <div class="lg:col-6 md:col-12 mx-auto">
-            <h2>About Me</h2>
+            <h2>
+                <fa-icon [icon]="faUser"></fa-icon> About Me
+            </h2>
             <p-divider></p-divider>
             <div [innerHTML]="profile.about.whoAmI"></div>
         </div>
@@ -37,31 +41,52 @@
             <p-divider layout="vertical"></p-divider>
         </div>
         <div class="lg:col-5 md:col-12 mx-auto">
-            <h2>Basic Information</h2>
+            <h2>
+                <fa-icon [icon]="faIdCard"></fa-icon> Basic Information
+            </h2>
             <p-divider></p-divider>
             <div class="my-4">
                 <div class="grid">
-                    <h4 class="col-5 my-0">Birthdate:</h4>
+                    <h4 class="col-5 my-0">
+                        <fa-icon [icon]="faBirthdayCake"></fa-icon> Birthdate:
+                    </h4>
                     <span class="col-7">{{profile.about.birthDate | ordinalDate}}</span>
+                    <p-divider class="col-12 my-0 py-0"></p-divider>
                 </div>
                 <div class="grid">
-                    <h4 class="col-5 my-0">Emails: </h4>
+                    <h4 class="col-5 my-0">
+                        <fa-icon [icon]="faEnvelope"></fa-icon> Emails:
+                    </h4>
                     <div class="col-7">
-                        <span *ngFor="let email of profile.emails">{{email}}<br></span>
+                        <span *ngFor="let email of profile.emails"><a target="_blank" class="mailto-link"
+                                href="mailto:{{email}}">{{email}}</a><br></span>
                     </div>
+                    <p-divider class="col-12 my-0 py-0"></p-divider>
                 </div>
                 <div class="grid">
-                    <h4 class="col-5 my-0">Phones:</h4>
+                    <h4 class="col-5 my-0">
+                        <fa-icon [icon]="faMobilePhone"></fa-icon> Phones:
+                    </h4>
                     <div class="col-7">
-                        <span *ngFor="let phone of profile.phones">{{phone}}<br></span>
+                        <span *ngFor="let phone of profile.phones"><a target="_blank" class="tel-link"
+                                href="tel:{{phone}}">{{phone}}</a><br></span>
                     </div>
+                    <p-divider class="col-12 my-0 py-0"></p-divider>
                 </div>
                 <div class="grid">
-                    <h4 class="col-5 my-0">Address:</h4>
-                    <div class="col-7">{{profile.about.address}}</div>
+                    <h4 class="col-5 my-0">
+                        <fa-icon [icon]="faMap"></fa-icon> Address:
+                    </h4>
+                    <div class="col-7">
+                        <a target="_blank" class="map-link"
+                            [href]="profile.about.addressOnMap">{{profile.about.address}}</a>
+                    </div>
+                    <p-divider class="col-12 my-0 py-0"></p-divider>
                 </div>
                 <div class="grid">
-                    <h4 class="col-5 my-0">Languages:</h4>
+                    <h4 class="col-5 my-0">
+                        <fa-icon [icon]="faLanguage"></fa-icon> Languages:
+                    </h4>
                     <div class="col-7">
                         <span *ngFor="let lang of profile.about.languages">{{lang}}<br></span>
                     </div>
@@ -71,11 +96,14 @@
     </div>
 </p-card>
 
-<p-card #experience header="Work Experience" styleClass="mt-5 w-10 mx-auto card-shadow">
+<p-card #experience header="" styleClass="mt-5 w-10 mx-auto card-shadow">
     <ng-template pTemplate="header">
         <div class="text-center">
             <div class="">
                 <img class="bitmoji bitmoji-laptop" src="assets/bitmojies/laptopWave.png" alt="Image" />
+                <h1>
+                    <fa-icon [icon]="faLaptop"></fa-icon> Experience
+                </h1>
             </div>
         </div>
     </ng-template>
@@ -84,11 +112,15 @@
             <ng-template pTemplate="header">
                 <div class="text-center pt-5">
                     <a *ngIf="!!experience.company.link" [href]="experience.company.link" target="_blank">
-                        <img *ngIf="experience.company.image" [src]="experience.company.image" [style]="experience.company.imageStyle">
-                        <h3 *ngIf="experience.company.showName || (!experience.company.image && !experience.company.link)" class="w-12">{{experience.company.name}}</h3>
+                        <img *ngIf="experience.company.image" [src]="experience.company.image"
+                            [style]="experience.company.imageStyle">
+                        <h3 *ngIf="experience.company.showName || (!experience.company.image && !experience.company.link)"
+                            class="w-12">{{experience.company.name}}</h3>
                     </a>
-                    <img *ngIf="experience.company.image && !experience.company.link" [src]="experience.company.image" [style]="experience.company.imageStyle">
-                    <h3 *ngIf="experience.company.showName || (!experience.company.image && !experience.company.link)" class="w-12 {{experience.company.showName? 'mt-0':''}}">{{experience.company.name}}</h3>
+                    <img *ngIf="experience.company.image && !experience.company.link" [src]="experience.company.image"
+                        [style]="experience.company.imageStyle">
+                    <h3 *ngIf="experience.company.showName || (!experience.company.image && !experience.company.link)"
+                        class="w-12 {{experience.company.showName? 'mt-0':''}}">{{experience.company.name}}</h3>
                 </div>
             </ng-template>
             <div class="grid">
@@ -129,11 +161,15 @@
     </div>
 </p-card>
 
-<p-card #skills header="Skills" styleClass="mt-5 w-10 mx-auto card-shadow">
+<p-card #skills styleClass="mt-5 w-10 mx-auto card-shadow">
     <ng-template pTemplate="header">
         <div class="text-center">
             <div class="">
                 <img class="bitmoji bitmoji-emoji" src="assets/bitmojies/smile_looking_left.png" alt="Image" />
+                <h1>
+                    <fa-icon [icon]="faTrophy"></fa-icon> Skills
+                </h1>
+
             </div>
         </div>
     </ng-template>
@@ -147,52 +183,60 @@
     </div>
 </p-card>
 
-<p-card #education header="Education" styleClass="mt-5 w-10 mx-auto card-shadow">
+<p-card #education header="" styleClass="mt-5 w-10 mx-auto card-shadow">
     <ng-template pTemplate="header">
         <div class="text-center">
             <div>
                 <img class="bitmoji bitmoji-laptop" src="assets/bitmojies/laptopReading.png" alt="Image" />
+                <h1>
+                    <fa-icon [icon]="faGraduationCap"></fa-icon> Education
+                </h1>
             </div>
         </div>
     </ng-template>
     <div *ngFor="let education of profile.educations" class="my-5 ">
         <div class="grid p-0 card-shadow">
-            <div class="col-3 bg-surface-d m-0">
-                <div class="text-center relative" style="height: 100%;">
-                    <h3 class="absolute top-0 text-center w-12 md:text-2xl">{{education.title}}</h3>
-                    <div class="absolute bottom-0 text-center w-12">
-                        <span class="text-xs">
-                            {{education.startDate | ordinalDate}}
-                            -
-                            {{
-                            (education?.endDate)
-                            ? (education.endDate | ordinalDate)
-                            : 'Present'
-                            }}
-                        </span>
-                        <br>
-                        <span class="text-xs">({{education | duration}})</span>
-                    </div>
-                </div>
+            <div class="col-12 text-center bg-surface-d m-0">
+                <h3 class="text-center w-12 md:text-2xl">
+                    <fa-icon *ngIf="education.icon" [icon]="education.icon" style="font-size: 1.5rem;" class="">
+                    </fa-icon>
+                    {{education.title}}
+                </h3>
             </div>
-            <div class="col-9 m-0 bg-surface-a">
-                <div>
+            <div class="col-12 m-0 bg-surface-a">
+                <div class="text-center">
                     <h2>{{education.description}}</h2>
                     <h4>{{education.college}}</h4>
-                    <ul>
+                    <ul class="text-left">
                         <li *ngFor="let achievement of education.achievements">{{achievement}}</li>
                     </ul>
                 </div>
+            </div>
+            <div class="col-12 text-center bg-surface-a">
+                <span class="text-xs">
+                    {{education.startDate | ordinalDate}}
+                    -
+                    {{
+                    (education?.endDate)
+                    ? (education.endDate | ordinalDate)
+                    : 'Present'
+                    }}
+                </span>
+                <br>
+                <span class="text-xs">({{education | duration}})</span>
             </div>
         </div>
     </div>
 </p-card>
 
-<p-card #contact header="Contact Me" styleClass="my-5 w-10 mx-auto card-shadow">
+<p-card #contact styleClass="my-5 w-10 mx-auto card-shadow">
     <ng-template pTemplate="header">
         <div class="text-center">
             <div class="">
                 <img class="bitmoji bitmoji-emoji" src="assets/bitmojies/wink.png" alt="Image" />
+                <h1>
+                    <fa-icon [icon]="faPhone"></fa-icon> Contact Me
+                </h1>
             </div>
         </div>
     </ng-template>
@@ -217,7 +261,8 @@
                         [ngClass]="{ 'is-invalid': !message.checkValidity() }" required></textarea>
                     <div class="col-12">
                         <button pButton class="bbgprimary-900 float-right" type="submit" (click)="onSubmit()">
-                            Send</button>
+                            <fa-icon [icon]="faPaperPlane"></fa-icon> Send
+                        </button>
                     </div>
                 </div>
             </div>
@@ -226,21 +271,34 @@
             <p-divider layout="vertical"></p-divider>
         </div>
         <div class="lg:col-5 col-12">
+            <h4 class="mt-0">Other ways to contact me </h4>
+
             <div class="grid">
-                <h4 class="col-5 my-0">Emails: </h4>
+                <h4 class="col-5 my-0">
+                    <fa-icon [icon]="faEnvelope"></fa-icon> Emails:
+                </h4>
                 <div class="col-7">
-                    <span *ngFor="let email of profile.emails">{{email}}<br></span>
+                    <span *ngFor="let email of profile.emails"><a target="_blank" class="mailto-link"
+                            href="mailto:{{email}}">{{email}}</a><br></span>
                 </div>
+                <p-divider class="col-12 my-0 py-0"></p-divider>
             </div>
             <div class="grid">
-                <h4 class="col-5 my-0">Phones:</h4>
+                <h4 class="col-5 my-0">
+                    <fa-icon [icon]="faMobilePhone"></fa-icon> Phones:
+                </h4>
                 <div class="col-7">
-                    <span *ngFor="let phone of profile.phones">{{phone}}<br></span>
+                    <span *ngFor="let phone of profile.phones"><a target="_blank" class="tel-link"
+                            href="tel:{{phone}}">{{phone}}</a><br></span>
                 </div>
+                <p-divider class="col-12 my-0 py-0"></p-divider>
             </div>
             <div class="grid">
-                <h4 class="col-5 my-0">Address:</h4>
-                <div class="col-7">{{profile.about.address}}</div>
+                <h4 class="col-5 my-0">
+                    <fa-icon [icon]="faMap"></fa-icon> Address:
+                </h4>
+                <div class="col-7"><a target="_blank" class="map-link"
+                        [href]="profile.about.addressOnMap">{{profile.about.address}}</a></div>
             </div>
         </div>
     </div>
@@ -248,12 +306,13 @@
 
 <footer class="footer">
     <div class="container text-center py-2">
-        <a *ngFor="let account of profile.about.accounts" class="{{!(dark|async)? 'font-black':'p-text-color'}} btn btn-link" [href]="account.url"
-            target="_blank">
-            <fa-icon [icon]="account.icon" style="font-size: 1.5rem;" class="mx-1 {{!(dark|async)? 'font-black':'p-text-color'}}"></fa-icon>
+        <a *ngFor="let account of profile.about.accounts"
+            class="{{!(dark|async)? 'font-black':'p-text-color'}} btn btn-link" [href]="account.url" target="_blank">
+            <fa-icon [icon]="account.icon" style="font-size: 1.5rem;"
+                class="{{!(dark|async)? 'font-black':'p-text-color'}}"></fa-icon>
         </a>
     </div>
-    <div class="text-center rights  {{!(dark|async)? 'font-black':'p-text-color'}}">
+    <div class="text-center rights  {{!(dark|async)? 'font-black':'p-text-color'}}">''
         <p>&copy; All rights reserved.</p>
     </div>
 </footer>

@@ -1,4 +1,5 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faUniversity, faSchool } from "@fortawesome/free-solid-svg-icons"
 import Profile from "./profile.models"
 
 export const profile: Profile = {
@@ -21,8 +22,8 @@ export const profile: Profile = {
     {
       company: { name: 'Code Library', link: '', image: 'assets/resources/experience/codeLib.png', imageStyle: 'width: unset !important; height: 12rem !important', description: 'Code Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Tishreen University.', showName: false },
       title: 'Programming Languages Lectures Writer',
-      startDate: new Date('2020-03-24'),
-      endDate: new Date('2021-03-25'),
+      startDate: new Date('2020-03-25'),
+      endDate: new Date('2021-03-26'),
       coreFunctionalities: ['Lectures Writing',],
       technologiesAndLanguages: ['Python', 'C++', 'OOP', 'Microsoft Word']
     },
@@ -30,7 +31,7 @@ export const profile: Profile = {
       company: { name: 'Programming Languages Tutor', link: '', image: 'assets/resources/experience/teacher.png', imageStyle: 'width: unset !important; height: 12rem !important', description: `I've worked as a private teacher for programming languages, following the curricula of Tishreen University.`, showName: true },
       title: 'Programming Languages Tutor',
       startDate: new Date('2020-03-24'),
-      endDate: new Date('2021-08-25'),
+      endDate: new Date('2021-08-24'),
       coreFunctionalities: ['Programming Languages Teaching',],
       technologiesAndLanguages: ['Python', 'C++', 'OOP', 'JAVA']
     },
@@ -51,6 +52,7 @@ export const profile: Profile = {
   educations: [
     {
       college: 'Tishreen University',
+      icon: faUniversity, 
       startDate: new Date('2019-09-20'),
       title: 'College',
       description: 'Bachelor of Technology - BTech, Information Engineering',
@@ -58,6 +60,7 @@ export const profile: Profile = {
     },
     {
       college: 'Local Secondary School',
+      icon: faSchool,
       startDate: new Date('2016-09-01'),
       endDate: new Date('2019-09-02'),
       title: 'Secondary School',
@@ -68,7 +71,8 @@ export const profile: Profile = {
   about: {
     name: 'Raouf Zeid Albeni',
     birthDate: new Date('2001-11-25'),
-    address: 'Latakia District, Latakia Governorate, Syria',
+    address: 'Latakia, Syria',
+    addressOnMap: 'https://goo.gl/maps/zyeamzULeKxQcNz66',
     languages: ['Arabic (Native Language)', 'English (Intermidate)'],
     job: 'Software Developer',
     accounts: [
