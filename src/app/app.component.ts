@@ -8,19 +8,15 @@ import { ClockService } from './services/clock.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-
   title = 'Raouf Albeni';
   dark = new BehaviorSubject(true);
 
   constructor(clockService: ClockService) {
-    clockService.time.subscribe(time => {
-      const curHr = time.getHours()
-      if (curHr < 6 || curHr >= 18)
-        this.dark.next(true);
-      else
-        this.dark.next(false);
-    })
+    clockService.time.subscribe((time) => {
+      const curHr = time.getHours();
+      if (curHr < 6 || curHr >= 18) this.dark.next(true);
+      else this.dark.next(false);
+    });
   }
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
