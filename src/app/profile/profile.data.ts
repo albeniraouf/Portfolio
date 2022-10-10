@@ -38,23 +38,7 @@ export const profile: Profile = {
     },
     {
       company: {
-        name: 'GATE Library',
-        link: '',
-        image: 'assets/resources/experience/gateLib.png',
-        imageStyle: 'width: unset !important; height: 10rem !important',
-        description:
-          'Gate Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Tishreen University.',
-        showName: false,
-      },
-      title: 'Programming Languages Lectures Writer',
-      startDate: new Date('2021-03-25'),
-      endDate: new Date('2021-08-25'),
-      coreFunctionalities: ['Lectures Writing'],
-      technologiesAndLanguages: ['JAVA', 'Microsoft Word'],
-    },
-    {
-      company: {
-        name: 'Code Library',
+        name: 'Code',
         link: '',
         image: 'assets/resources/experience/codeLib.png',
         imageStyle: 'width: unset !important; height: 12rem !important',
@@ -62,11 +46,11 @@ export const profile: Profile = {
           'Code Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Tishreen University.',
         showName: false,
       },
-      title: 'Programming Languages Lectures Writer',
+      title: 'Programming Languages Lectures Writer & Projects Programmer',
       startDate: new Date('2020-03-25'),
-      endDate: new Date('2021-03-26'),
-      coreFunctionalities: ['Lectures Writing'],
-      technologiesAndLanguages: ['Python', 'C++', 'OOP', 'Microsoft Word'],
+      endDate: new Date('2021-08-26'),
+      coreFunctionalities: ['Lectures Writing', 'Web Apps Programmer'],
+      technologiesAndLanguages: ['React','Python', 'C++', 'Java', 'OOP', 'Microsoft Word'],
     },
     {
       company: {
@@ -101,6 +85,7 @@ export const profile: Profile = {
     'Java',
     'Typescript',
     'PHP',
+    'React',
     'Laravel',
     'Linux',
     'Wordpress',
