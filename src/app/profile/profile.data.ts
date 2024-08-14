@@ -34,6 +34,7 @@ export const profile: Profile = {
         'PostgreSQL',
         'Node',
         'TypeScript',
+        'Flutter',
         'Mailgun',
         'SMTP',
         'Jira',
@@ -67,6 +68,7 @@ export const profile: Profile = {
         'PostgreSQL',
         'Node',
         'TypeScript',
+        'Flutter',
       ],
     },
     {
@@ -181,7 +183,7 @@ export const profile: Profile = {
       },
     ],
     whoAmI: `<p align="justify">I'm an information engineering student.<br>
-    I work as a software developer especially in web development.<br>
+    I work as a fullstack software developer & team leader especially in web development.<br>
     I'm very passionate, fast learner, multitasker and  hardworker.<br>
     I started my career while studying, I started as a programming languages courses teacher, and I was writing programming lectures.<br>
     Then I've started working at Socienta as a software developer, mainly in Angular, Node, Express and PostgreSQL</p>`,
