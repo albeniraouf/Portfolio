@@ -108,6 +108,8 @@ export const profile: Profile = {
     'Bash',
     'Express',
     'PostgreSQL',
+    'Dart',
+    'Flutter',
     'MySQL',
     'HTML',
     'CSS',
