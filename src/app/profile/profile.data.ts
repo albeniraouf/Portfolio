@@ -93,7 +93,7 @@ export const profile: Profile = {
         link: '',
         image: 'assets/resources/experience/teacher.png',
         imageStyle: 'width: unset !important; height: 12rem !important',
-        description: `I've worked as a private teacher for programming languages, following the curricula of Tishreen University.`,
+        description: `I've worked as a private teacher for programming languages, following the curricula of Lattakia University.`,
         showName: true,
       },
       title: 'Programming Languages Tutor',
@@ -129,7 +129,7 @@ export const profile: Profile = {
   ],
   educations: [
     {
-      college: 'Tishreen University',
+      college: 'Lattakia University',
       icon: faUniversity,
       startDate: new Date('2019-09-20'),
       title: 'College',
