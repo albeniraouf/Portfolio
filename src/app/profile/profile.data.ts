@@ -7,7 +7,7 @@ export const profile: Profile = {
         location: 'New York - Remote',
         name: 'KnockIQ',
         link: 'https://knockiq.ai',
-        image: '/resources/experience/knockiq.png',
+        image: 'resources/experience/knockiq.png',
         imageStyle: 'width: 40% !important; padding: 1rem;',
         description: `KnockIQ is a pioneering technology company revolutionizing B2B lead generation through advanced artificial intelligence. By leveraging AI-driven insights and real-time engagement tools. KnockIQ empowers businesses to identify and connect with qualified leads.`,
         showName: false
@@ -36,7 +36,7 @@ export const profile: Profile = {
         location: 'Dubai - Remote',
         name: 'Socienta',
         link: 'https://socienta.com',
-        image: '/resources/experience/socienta.png',
+        image: 'resources/experience/socienta.png',
         imageStyle: 'width: 40% !important; padding: 1rem;',
         description:
           'Socienta empowers community management companies of all sizes in cutting through complexities of real-estate with a solution to serve landlords & tenants within their communities with the utmost satisfaction.',
@@ -70,7 +70,7 @@ export const profile: Profile = {
         location: 'Dubai - Remote',
         name: 'Socienta',
         link: 'https://socienta.com',
-        image: '/resources/experience/socienta.png',
+        image: 'resources/experience/socienta.png',
         imageStyle: 'width: 40% !important;padding: 1rem; ',
         description:
           'Socienta empowers community management companies of all sizes in cutting through complexities of real-estate with a solution to serve landlords & tenants within their communities with the utmost satisfaction.',
@@ -99,7 +99,7 @@ export const profile: Profile = {
         location: 'Latakia - On-site',
         name: 'Code',
         link: '',
-        image: '/resources/experience/codeLib.png',
+        image: 'resources/experience/codeLib.png',
         imageStyle: 'width: unset !important; height: 12rem !important; filter:invert(1);',
         description:
           'Code Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Tishreen University.',
@@ -123,7 +123,7 @@ export const profile: Profile = {
         location: 'Latakia - On-site',
         name: 'Programming Languages Tutor',
         link: '',
-        image: '/resources/experience/teacher.png',
+        image: 'resources/experience/teacher.png',
         imageStyle: 'width: unset !important; height: 12rem !important; filter:invert(1);',
         description: `I've worked as a private teacher for programming languages, following the curricula of Latakia University.`,
         showName: true,
@@ -181,7 +181,7 @@ export const profile: Profile = {
     },
   ],
   about: {
-    profileImage: '/resources/profile.webp',
+    profileImage: 'resources/profile.webp',
     name: 'Raouf Zeid Albeni',
     job: 'Software Developer',
     birthDate: new Date('2001-11-25'),
