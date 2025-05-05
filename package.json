@@ -4,10 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:prod": "ng build --configuration production",
-    "build:dev": "ng build --configuration development",
-    "start:built": "http-server dist/portfolio/browser",
-    "test": "ng test"
+    "build": "ng build --configuration production --base-href \"https://albeniraouf.github.io/Portfolio/\"",
+    "deploy": "npx angular-cli-ghpages --base-href=\"https://albeniraouf.github.io/Portfolio/\" --dir=dist"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +33,7 @@
     "@angular/cli": "^19.2.0",
     "@angular/compiler-cli": "^19.2.0",
     "@types/jasmine": "~5.1.0",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
