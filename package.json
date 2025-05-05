@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --configuration production --base-href \"https://albeniraouf.github.io/Portfolio/\"",
-    "deploy": "npx angular-cli-ghpages --base-href=\"https://albeniraouf.github.io/Portfolio/\" --dir=dist"
+    "deploy": "npx angular-cli-ghpages --dir=dist/browser"
   },
   "private": true,
   "dependencies": {
