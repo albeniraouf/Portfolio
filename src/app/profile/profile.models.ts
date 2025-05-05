@@ -1,0 +1,51 @@
+
+export interface Company {
+  name: string;
+  location: string;
+  link: string;
+  description: string;
+  image?: string;
+  imageStyle?: string;
+  showName: boolean;
+}
+export interface Experience {
+  company: Company;
+  title: string;
+  startDate: Date;
+  endDate?: Date;
+  coreFunctionalities: string[];
+  technologiesAndLanguages: string[];
+}
+export interface Education {
+  startDate: Date;
+  endDate?: Date;
+  title: string;
+  description: string;
+  college: string;
+  achievements: string[];
+  icon?: string;
+}
+export interface Account {
+  url: string;
+  website: string;
+  icon: string;
+}
+export interface About {
+  profileImage: string;
+  name: string;
+  job: string;
+  accounts: Account[];
+  birthDate: Date;
+  address: string;
+  addressOnMap: string;
+  languages: string[];
+  whoAmI: string;
+  emails: string[];
+  phones: string[];
+}
+export default interface Profile {
+  experiences: Experience[];
+  skills: string[];
+  educations: Education[];
+  about: About;
+}

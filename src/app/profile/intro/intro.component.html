@@ -1,0 +1,19 @@
+<div id="intro" class="text-center py-8">
+    <div class="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-200 intro-image">
+      <img class="rounded-full" [src]="about.profileImage" alt="Profile image">
+    </div>
+    <h2 class="text-3xl font-bold intro-name text-white">{{ about.name }}</h2>
+    <h4 class="text-xl font-semibold text-gray-200 mt-2 intro-job">{{ about.job }}</h4>
+    <div class="flex justify-center gap-4 mt-4 intro-links">
+      <a
+        *ngFor="let account of about.accounts"
+        class="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+        [href]="account.url"
+        target="_blank"
+        rel="tooltip"
+        [title]="'Follow me on ' + account.website"
+      >
+        <ng-icon [name]="account.icon" class="material-icons text-2xl"></ng-icon>
+      </a>
+    </div>
+  </div>

@@ -1,0 +1,43 @@
+<app-card id="education">
+  <div class="text-center mb-6 education-header">
+    <h1 class="text-3xl font-bold flex items-center justify-center gap-2">
+      <ng-icon name="book"></ng-icon> Education
+    </h1>
+  </div>
+  <div
+    *ngFor="let education of educations"
+    class="my-6 p-4 bg-[#fffc] rounded-lg education-card"
+  >
+    <div class="text-center bg-gray-100 p-4 rounded-t-lg">
+      <h3 class="text-xl font-semibold flex items-center justify-center gap-2">
+        <ng-icon *ngIf="education.icon" [name]="education.icon"> </ng-icon>
+        {{ education.title }}
+      </h3>
+    </div>
+    <div class="p-4 bg-[#fffc] rounded-b-lg">
+      <div class="text-center">
+        <h2 class="text-lg font-semibold">{{ education.description }}</h2>
+        <h4 class="text-gray-600">{{ education.college }}</h4>
+        <ul class="text-left list-disc pl-6 mt-2">
+          <li
+            *ngFor="let achievement of education.achievements"
+            class="text-gray-700"
+          >
+            {{ achievement }}
+          </li>
+        </ul>
+      </div>
+      <div class="text-center mt-4">
+        <span class="text-sm text-gray-600">
+          {{ education.startDate | ordinalDate }}
+          -
+          {{
+            education.endDate ? (education.endDate | ordinalDate) : "Present"
+          }}
+        </span>
+        <br />
+        <span class="text-sm text-gray-600">({{ education | duration }})</span>
+      </div>
+    </div>
+  </div>
+</app-card>

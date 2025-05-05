@@ -1,0 +1,11 @@
+{
+    "/bing/*": {
+        "target": "https://www.bing.com",
+        "secure": true,
+        "changeOrigin": true,
+        "pathRewrite": {
+            "^/bing": ""
+        },
+        "logLevel": "debug"
+    }
+}

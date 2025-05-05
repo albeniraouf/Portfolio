@@ -1,0 +1,97 @@
+<app-card id="experience">
+  <div class="text-center mb-6 experience-header">
+    <h1 class="text-3xl font-bold flex items-center justify-center gap-2">
+      <ng-icon name="laptop"></ng-icon> Experience
+    </h1>
+  </div>
+  <div
+    *ngFor="let experience of experiences"
+    class="my-6 p-4 bg-[#fffc] rounded-lg experience-card"
+  >
+    <div class="text-center mb-4">
+      <a
+        *ngIf="!!experience.company.link"
+        [href]="experience.company.link"
+        target="_blank"
+      >
+        <img
+          *ngIf="experience.company.image"
+          [src]="experience.company.image"
+          [style]="experience.company.imageStyle"
+          class="mx-auto"
+        />
+        <h3
+          *ngIf="
+            experience.company.showName ||
+            (!experience.company.image && !experience.company.link)
+          "
+          class="text-xl font-semibold mt-2"
+        >
+          {{ experience.company.name }}
+        </h3>
+      </a>
+      <img
+        *ngIf="experience.company.image && !experience.company.link"
+        [src]="experience.company.image"
+        [style]="experience.company.imageStyle"
+        class="mx-auto"
+      />
+      <h3
+        *ngIf="
+          experience.company.showName ||
+          (!experience.company.image && !experience.company.link)
+        "
+        class="text-xl font-semibold mt-2"
+      >
+        {{ experience.company.name }}
+      </h3>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+      <div class="lg:col-span-2">
+        <div>
+          <b class="font-semibold">Job Title:</b> {{ experience.title }}
+          <br />
+          <b class="font-semibold">Location:</b>
+          {{ experience.company.location }}
+          <br />
+          <span class="text-sm text-gray-600">
+            {{ experience.startDate | ordinalDate }}
+            -
+            {{
+              !!experience.endDate
+                ? (experience.endDate | ordinalDate)
+                : "Present"
+            }}
+          </span>
+          <span class="text-sm text-gray-600"
+            >({{ experience | duration }})</span
+          >
+        </div>
+        <hr class="my-4 border-gray-200" />
+        <p class="text-gray-700 leading-relaxed">
+          {{ experience.company.description }}
+        </p>
+      </div>
+      <div class="lg:col-span-3">
+        <h4 class="font-semibold mb-2">Core Functionalities:</h4>
+        <div class="flex flex-wrap gap-2">
+          <span
+            *ngFor="let function of experience.coreFunctionalities"
+            class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
+          >
+            {{ function }}
+          </span>
+        </div>
+        <h4 class="font-semibold mt-4 mb-2">Technologies and Languages:</h4>
+        <div class="flex flex-wrap gap-2">
+          <span
+            *ngFor="let function of experience.technologiesAndLanguages"
+            class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full"
+          >
+            {{ function }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-card>

@@ -1,0 +1,81 @@
+<app-card id="about">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <div class="mx-auto w-full about-me">
+      <h2 class="text-2xl font-bold flex items-center gap-2">
+        <ng-icon name="person"></ng-icon> About Me
+      </h2>
+      <hr class="my-4 border-gray-200" />
+      <div
+        [innerHTML]="about.whoAmI"
+        class="text-gray-700 leading-relaxed"
+      ></div>
+    </div>
+    <div class="mx-auto w-full about-info">
+      <h2 class="text-2xl font-bold flex items-center gap-2">
+        <ng-icon name="info"></ng-icon> Basic Information
+      </h2>
+      <hr class="my-4 border-gray-200" />
+      <div class="space-y-4">
+        <div class="grid grid-cols-5 items-center">
+          <h4 class="col-span-2 font-semibold flex items-center gap-2">
+            <ng-icon name="cake"></ng-icon> Birthdate:
+          </h4>
+          <span class="col-span-3">{{ about.birthDate | ordinalDate }}</span>
+        </div>
+        <hr class="border-gray-200" />
+        <div class="grid grid-cols-5 items-center">
+          <h4 class="col-span-2 font-semibold flex items-center gap-2">
+            <ng-icon name="email"></ng-icon> Emails:
+          </h4>
+          <div class="col-span-3">
+            <span *ngFor="let email of about.emails">
+              <a
+                target="_blank"
+                class="text-blue-600"
+                href="mailto:{{ email }}"
+                >{{ email }}</a
+              ><br />
+            </span>
+          </div>
+        </div>
+        <hr class="border-gray-200" />
+        <div class="grid grid-cols-5 items-center">
+          <h4 class="col-span-2 font-semibold flex items-center gap-2">
+            <ng-icon name="phone"></ng-icon> Phones:
+          </h4>
+          <div class="col-span-3">
+            <span *ngFor="let phone of about.phones">
+              <a target="_blank" class="text-blue-600" href="tel:{{ phone }}">{{
+                phone
+              }}</a
+              ><br />
+            </span>
+          </div>
+        </div>
+        <hr class="border-gray-200" />
+        <div class="grid grid-cols-5 items-center">
+          <h4 class="col-span-2 font-semibold flex items-center gap-2">
+            <ng-icon name="address"></ng-icon> Address:
+          </h4>
+          <div class="col-span-3">
+            <a
+              target="_blank"
+              class="text-blue-600"
+              [href]="about.addressOnMap"
+              >{{ about.address }}</a
+            >
+          </div>
+        </div>
+        <hr class="border-gray-200" />
+        <div class="grid grid-cols-5 items-center">
+          <h4 class="col-span-2 font-semibold flex items-center gap-2">
+            <ng-icon name="language"></ng-icon> Languages:
+          </h4>
+          <div class="col-span-3">
+            <span *ngFor="let lang of about.languages">{{ lang }}<br /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-card>
