@@ -9,6 +9,7 @@ import { profile as _profile } from './profile.data';
     <app-experience [experiences]="profile.experiences"></app-experience>
     <app-skills [skills]="profile.skills"></app-skills>
     <app-education [educations]="profile.educations"></app-education>
+    <app-certs [certs]="profile.certifications"></app-certs>
     <app-footer [accounts]="profile.about.accounts"></app-footer>
   `,
 })

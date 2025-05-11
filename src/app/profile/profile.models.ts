@@ -25,6 +25,14 @@ export interface Education {
   achievements: string[];
   icon?: string;
 }
+export interface Certificate {
+  date: Date;
+  title: string;
+  description: string;
+  origin: string;
+  img: string;
+  link?: string;
+}
 export interface Account {
   url: string;
   website: string;
@@ -47,5 +55,6 @@ export default interface Profile {
   experiences: Experience[];
   skills: string[];
   educations: Education[];
+  certifications: Certificate[];
   about: About;
 }

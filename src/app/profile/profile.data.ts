@@ -10,7 +10,7 @@ export const profile: Profile = {
         image: 'resources/experience/knockiq.png',
         imageStyle: 'width: 40% !important; padding: 1rem;',
         description: `KnockIQ is a pioneering technology company revolutionizing B2B lead generation through advanced artificial intelligence. By leveraging AI-driven insights and real-time engagement tools. KnockIQ empowers businesses to identify and connect with qualified leads.`,
-        showName: false
+        showName: false,
       },
       title: 'Software Developer',
       startDate: new Date('2025-03-28'),
@@ -100,7 +100,8 @@ export const profile: Profile = {
         name: 'Code',
         link: '',
         image: 'resources/experience/codeLib.png',
-        imageStyle: 'width: unset !important; height: 12rem !important; filter:invert(1);',
+        imageStyle:
+          'width: unset !important; height: 12rem !important; filter:invert(1);',
         description:
           'Code Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Tishreen University.',
         showName: false,
@@ -124,7 +125,8 @@ export const profile: Profile = {
         name: 'Programming Languages Tutor',
         link: '',
         image: 'resources/experience/teacher.png',
-        imageStyle: 'width: unset !important; height: 12rem !important; filter:invert(1);',
+        imageStyle:
+          'width: unset !important; height: 12rem !important; filter:invert(1);',
         description: `I've worked as a private teacher for programming languages, following the curricula of Latakia University.`,
         showName: true,
       },
@@ -220,4 +222,13 @@ export const profile: Profile = {
     emails: ['raouf.albeni@gmail.com', 'raouf.albeni@yahoo.com'],
     phones: ['+963 949 294 811', '+963 981 241 453'],
   },
+  certifications: [
+    {
+      date: new Date('2025-04-01'),
+      title: 'Spotlight of the Quarter - Q1 2025',
+      description: 'Awarded to be the Spotlight of the Quarter One of 2025',
+      origin: 'Socienta',
+      img: 'resources/certificates/socientaQ1Spotlight.png',
+    },
+  ],
 };

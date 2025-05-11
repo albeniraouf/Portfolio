@@ -30,9 +30,10 @@ import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
 import { FooterComponent } from './footer/footer.component';
 import { UiModule } from '../ui/ui.module';
+import { CertsComponent } from './certs/certs.component';
 
 @NgModule({
-  declarations: [ProfileComponent, IntroComponent, AboutComponent, ExperienceComponent, SkillsComponent, EducationComponent, FooterComponent],
+  declarations: [ProfileComponent, IntroComponent, AboutComponent, ExperienceComponent, SkillsComponent, EducationComponent, FooterComponent, CertsComponent],
   exports: [ProfileComponent],
   imports: [
     CommonModule,
