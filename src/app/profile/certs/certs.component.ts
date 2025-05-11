@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Certificate } from '../profile.models';
-
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap"
 @Component({
   selector: 'app-certs',
   standalone: false,
