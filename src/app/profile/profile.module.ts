@@ -31,6 +31,7 @@ import { EducationComponent } from './education/education.component';
 import { FooterComponent } from './footer/footer.component';
 import { UiModule } from '../ui/ui.module';
 import { CertsComponent } from './certs/certs.component';
+import { NgxTypedWriterModule } from 'ngx-typed-writer';
 
 @NgModule({
   declarations: [ProfileComponent, IntroComponent, AboutComponent, ExperienceComponent, SkillsComponent, EducationComponent, FooterComponent, CertsComponent],
@@ -39,6 +40,7 @@ import { CertsComponent } from './certs/certs.component';
     CommonModule,
     PipesModule,
     UiModule,
+    NgxTypedWriterModule,
     NgIconsModule.withIcons({
       facebook: faBrandFacebook,
       instagram: faBrandInstagram,

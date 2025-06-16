@@ -212,13 +212,18 @@ export const profile: Profile = {
         icon: 'instagram',
       },
     ],
-    whoAmI: `<p align="justify">I'm an information engineering student.<br>
-    I work as a fullstack software developer & team leader especially in web development.<br>
-    I'm very passionate, fast learner, multitasker and  hardworker.<br>
-    I started my career while studying, I started as a programming languages courses teacher, and I was writing programming lectures.<br>
-    Then I've started working at Socienta as a software developer, mainly in Angular, Express and PostgreSQL.<br>
-    I've started working on a side job with KnockIQ as a backend developer, mainly in Express, Prisma and PostgreSQL.
-    </p>`,
+    // whoAmI: `
+    // <p align="left">
+    //   I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br/>
+    //   I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br/>
+    //   I later joined <b>Socienta</b> as a Software Developer, working primarily with Angular, Express, and PostgreSQL. Over time, I took on more responsibilities and eventually stepped into a Team Leader role.<br/>
+    //   In parallel, I also started working with <b>KnockIQ</b> as a Backend Developer, where I focus on building scalable backend systems using Express, Prisma, and PostgreSQL.<br/>
+    // </p>`,
+    whoAmI: [`I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>...`,
+      `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br>...`,
+      `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br>I later joined <b>Socienta</b> as a Software Developer, working primarily with Angular, Express, and PostgreSQL. Over time, I took on more responsibilities and eventually stepped into a Team Leader role.<br>...`,
+      `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br>I later joined <b>Socienta</b> as a Software Developer, working primarily with Angular, Express, and PostgreSQL. Over time, I took on more responsibilities and eventually stepped into a Team Leader role.<br>In parallel, I also started working with <b>KnockIQ</b> as a Backend Developer, where I focus on building scalable backend systems using Express, Prisma, and PostgreSQL.`
+    ],
     emails: ['raouf.albeni@gmail.com', 'raouf.albeni@yahoo.com'],
     phones: ['+963 949 294 811', '+963 981 241 453'],
   },
