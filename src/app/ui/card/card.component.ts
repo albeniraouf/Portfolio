@@ -6,8 +6,7 @@ import { Component, Input, input } from '@angular/core';
   template: `
     <div
       [id]="id"
-      class="max-w-5xl mx-auto md:my-8 my-{{ my }}  p-6 rounded-lg shadow-md"
-      style="background-color: #{{ bg }}"
+      class="max-w-5xl mx-auto bg-[#fff8] lg:bg-[#fffc] my-8 p-6 rounded-lg shadow-md"
     >
       <ng-content></ng-content>
     </div>
@@ -15,6 +14,4 @@ import { Component, Input, input } from '@angular/core';
 })
 export class CardComponent {
   @Input() id!: string;
-  @Input() bg: string = 'fffc';
-  @Input() my: number = 8;
 }
