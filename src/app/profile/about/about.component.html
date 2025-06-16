@@ -1,24 +1,14 @@
-<app-card id="about">
+<app-card id="about" push="left">
   <div class="text-center mb-6 about-header">
     <h1 class="text-2xl font-bold flex items-center justify-center gap-2">
       <ng-icon name="person"></ng-icon> About Me
     </h1>
   </div>
-  <div class="flex gap-8 text-center bg-gray-100 p-4 rounded-t-lg">
-    <!-- <div
-        [innerHTML]="about.whoAmI.join('<br/>')"
-        class="text-gray-700 leading-relaxed w-[60%]"
-      ></div> -->
-    <ngx-typed-writer
-      [strings]="about.whoAmI"
-      [typeSpeed]="15"
-      [backSpeed]="15"
-      [smartBackspace]="true"
-      [loop]="false"
-      [showCursor]="false"
-      [isHTML]="true"
-      class="text-gray-700 text-left leading-relaxed w-[60%]"
-    ></ngx-typed-writer>
+  <div class="flex md:flex-row flex-col gap-8 text-center bg-gray-100 p-4 rounded-t-lg">
+    <div
+        [innerHTML]="about.whoAmI"
+        class="text-gray-700 text-left leading-relaxed md:w-[60%] w-full"
+      ></div>
     <div class="mx-auto about-info flex flex-col gap-1">
       <div class="grid grid-cols-5 items-start flex-grow-1">
         <h4 class="col-span-2 font-semibold flex items-center gap-2">

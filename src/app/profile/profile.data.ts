@@ -21,6 +21,7 @@ export const profile: Profile = {
         'Git',
         'JWT',
         'Express',
+        'Prisma',
         'PostgreSQL',
         'Node',
         'TypeScript',
@@ -29,6 +30,7 @@ export const profile: Profile = {
         'Confluence',
         'ESLint',
         'Automation Tests',
+        'Stripe',
       ],
     },
     {
@@ -141,6 +143,7 @@ export const profile: Profile = {
     'Angular',
     'Bash',
     'Express',
+    'Prisma',
     'PostgreSQL',
     'MySQL',
     'HTML',
@@ -160,6 +163,7 @@ export const profile: Profile = {
     'Wordpress',
     'MS Office',
     'RxJS',
+    'Stripe'
   ],
   educations: [
     {
@@ -212,18 +216,7 @@ export const profile: Profile = {
         icon: 'instagram',
       },
     ],
-    // whoAmI: `
-    // <p align="left">
-    //   I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br/>
-    //   I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br/>
-    //   I later joined <b>Socienta</b> as a Software Developer, working primarily with Angular, Express, and PostgreSQL. Over time, I took on more responsibilities and eventually stepped into a Team Leader role.<br/>
-    //   In parallel, I also started working with <b>KnockIQ</b> as a Backend Developer, where I focus on building scalable backend systems using Express, Prisma, and PostgreSQL.<br/>
-    // </p>`,
-    whoAmI: [`I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>...`,
-      `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br>...`,
-      `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br>I later joined <b>Socienta</b> as a Software Developer, working primarily with Angular, Express, and PostgreSQL. Over time, I took on more responsibilities and eventually stepped into a Team Leader role.<br>...`,
-      `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work. My career began during my studies, teaching programming language courses and writing programming lectures.<br>I later joined <b>Socienta</b> as a Software Developer, working primarily with Angular, Express, and PostgreSQL. Over time, I took on more responsibilities and eventually stepped into a Team Leader role.<br>In parallel, I also started working with <b>KnockIQ</b> as a Backend Developer, where I focus on building scalable backend systems using Express, Prisma, and PostgreSQL.`
-    ],
+    whoAmI: `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work.`,
     emails: ['raouf.albeni@gmail.com', 'raouf.albeni@yahoo.com'],
     phones: ['+963 949 294 811', '+963 981 241 453'],
   },

@@ -15,18 +15,9 @@ body {
   height: 100vh;
   // background-position: center;
   background-repeat: no-repeat;
-  animation: gradient-animation 15s ease infinite;
-
 }
 
-@keyframes gradient-animation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+
+.glow-box {
+  box-shadow: 0 0 40px -5px white
 }

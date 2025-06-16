@@ -11,8 +11,7 @@ import gsap from 'gsap';
 export class IntroComponent implements AfterViewInit {
   @Input() about!: About;
 
-
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     gsap.registerPlugin(ScrollTrigger);
     gsap.from('.intro-image', {
       opacity: 0,
@@ -22,8 +21,8 @@ export class IntroComponent implements AfterViewInit {
       scrollTrigger: {
         trigger: '.intro-image',
         start: 'top 90%',
-        toggleActions: 'play none none reset'
-      }
+        toggleActions: 'play none none reset',
+      },
     });
     gsap.from('.intro-name', {
       opacity: 0,
@@ -33,8 +32,8 @@ export class IntroComponent implements AfterViewInit {
       scrollTrigger: {
         trigger: '.intro-name',
         start: 'top 90%',
-        toggleActions: 'play none none reset'
-      }
+        toggleActions: 'play none none reset',
+      },
     });
     gsap.from('.intro-job', {
       opacity: 0,
@@ -44,8 +43,8 @@ export class IntroComponent implements AfterViewInit {
       scrollTrigger: {
         trigger: '.intro-job',
         start: 'top 90%',
-        toggleActions: 'play none none reset'
-      }
+        toggleActions: 'play none none reset',
+      },
     });
     gsap.from('.intro-links a', {
       opacity: 0,
@@ -56,10 +55,8 @@ export class IntroComponent implements AfterViewInit {
       scrollTrigger: {
         trigger: '.intro-links',
         start: 'top 90%',
-        toggleActions: 'play none none reset'
-      }
+        toggleActions: 'play none none reset',
+      },
     });
-
   }
-
 }

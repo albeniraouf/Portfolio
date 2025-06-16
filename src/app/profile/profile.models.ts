@@ -47,7 +47,7 @@ export interface About {
   address: string;
   addressOnMap: string;
   languages: string[];
-  whoAmI: string[];
+  whoAmI: string;
   emails: string[];
   phones: string[];
 }
