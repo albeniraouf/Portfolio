@@ -54,22 +54,18 @@ import { Component, AfterViewInit, OnDestroy, ElementRef, ViewChild } from '@ang
   `],
   standalone: false
 })
-export class StarfieldComponent implements AfterViewInit, OnDestroy {
+export class StarfieldComponent implements AfterViewInit {
   @ViewChild('starContainer') starContainer!: ElementRef<HTMLDivElement>;
   stars: { x: number; y: number; vx: number }[] = [];
-  private isScrolling = false;
-  private lastScrollTop = window.scrollY;
-  private scrollTimeout: number | null = null;
 
   ngAfterViewInit() {
     this.initStars();
-    this.setupScrollListener();
   }
 
   private initStars() {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    for (let i = 0; i < 35; i++) {
+    for (let i = 0; i < 150; i++) {
       this.stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
@@ -78,71 +74,5 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  private updateStars(scrollingDown: boolean) {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-    const container = this.starContainer.nativeElement;
 
-    container.querySelectorAll('.star').forEach((el: Element, i: number) => {
-      const star = this.stars[i];
-      const htmlEl = el as HTMLElement;
-      if (scrollingDown) {
-        star.y += star.vx;
-        htmlEl.classList.remove('moving-up');
-        htmlEl.classList.add('moving-down');
-        if (star.y > height) {
-          star.y = 0;
-          star.x = Math.random() * width;
-          star.vx = 10;
-          htmlEl.style.animation = 'none';
-          htmlEl.offsetHeight; // Trigger reflow
-          htmlEl.style.animation = `moveDown ${100 / star.vx}s linear`;
-        }
-      } else {
-        star.y -= star.vx;
-        htmlEl.classList.remove('moving-down');
-        htmlEl.classList.add('moving-up');
-        if (star.y < 0) {
-          star.y = height;
-          star.x = Math.random() * width;
-          star.vx = Math.ceil(Math.random() * 10);
-          htmlEl.style.animation = 'none';
-          htmlEl.offsetHeight; // Trigger reflow
-          htmlEl.style.animation = `moveUp ${100 / star.vx}s linear`;
-        }
-      }
-      htmlEl.style.left = `${star.x}px`;
-      htmlEl.style.top = `${star.y}px`;
-    });
-  }
-
-  private setupScrollListener() {
-    window.addEventListener('scroll', () => {
-      this.isScrolling = true;
-      const currentScrollTop = window.scrollY;
-      const scrollingDown = currentScrollTop > this.lastScrollTop;
-      this.lastScrollTop = currentScrollTop;
-
-      this.updateStars(scrollingDown);
-
-      if (this.scrollTimeout) {
-        clearTimeout(this.scrollTimeout);
-      }
-
-      this.scrollTimeout = window.setTimeout(() => {
-        this.isScrolling = false;
-        this.starContainer.nativeElement.querySelectorAll('.star').forEach((el: Element) => {
-          const htmlEl = el as HTMLElement;
-          htmlEl.style.animation = 'none';
-          htmlEl.classList.remove('moving-up', 'moving-down');
-        });
-      }, 100);
-    });
-  }
-
-  ngOnDestroy() {
-    if (this.scrollTimeout) {
-      clearTimeout(this.scrollTimeout);
-    }
-  }
 }
