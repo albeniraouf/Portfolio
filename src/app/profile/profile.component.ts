@@ -4,7 +4,7 @@ import { profile as _profile } from './profile.data';
   selector: 'profile',
   standalone: false,
   template: `
-    <div class="max-w-5xl mx-auto bg-transparent lg:bg-[#fff4] lg:my-8 p-6 rounded-lg shadow-md">
+    <div class="max-w-5xl mx-auto bg-[#fff4] lg:my-8 p-6 rounded-lg shadow-md">
       <app-intro [about]="profile.about"></app-intro>
       <app-about [about]="profile.about"></app-about>
       <app-experience [experiences]="profile.experiences"></app-experience>

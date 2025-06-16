@@ -69,7 +69,7 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
   private initStars() {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < 35; i++) {
       this.stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
