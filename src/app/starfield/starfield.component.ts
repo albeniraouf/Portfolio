@@ -62,19 +62,19 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
 
   private initCanvas() {
     const canvas = this.trailCanvas.nativeElement;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.outerWidth;
+    canvas.height = window.outerHeight;
     this.ctx = canvas.getContext('2d')!;
   }
 
   private initStars() {
-    const width = window.innerWidth;
+    const width = window.outerWidth;
     const height = window.innerHeight;
     for (let i = 0; i < 150; i++) {
       this.stars.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        vx: 0.4,
+        vx: 0.5,
         vy: -0.1,
       });
     }
@@ -83,7 +83,7 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
 
   private initMeteorSpawn() {
     this.meteorSpawnTimer = setInterval(() => {
-      const width = window.innerWidth;
+      const width = window.outerWidth;
       const height = window.innerHeight;
       this.meteors.push({
         x: (Math.random() * width) / 3,
@@ -143,9 +143,8 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
   }
 
   private animate() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
+    const width = window.outerWidth;
+    const height = window.outerHeight;
     this.stars = this.stars.map((star) => {
       let newY = star.y + star.vy;
       let newX = star.x + star.vx;
