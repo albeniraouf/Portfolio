@@ -9,20 +9,20 @@
     class="my-6 p-4 bg-[#fffc] rounded-lg certification-card"
   >
     <div
-      class="text-center bg-gray-100 p-4 rounded-t-lg flex gap-5 justify-center items-center"
+      class="text-center bg-gray-100 p-4 rounded-t-lg gap-5 grid grid-col-3 lg:grid-cols-2"
     >
-      <div>
+      <div class="text-center items-center justify-center">
         <img
           [src]="cert.img"
-          class="w-[500px] cursor-pointer"
+          class="w-[500px] cursor-pointer mx-auto"
           (click)="openModal(cert.img)"
           alt="{{ cert.title }}"
         />
       </div>
-      <div class="flex flex-col justify-center">
-        <h3 class="text-xl font-semibold">{{ cert.title }}</h3>
+      <div class="flex flex-col justify-center h-full">
+        <h3 class="text-md lg:text-xl font-semibold">{{ cert.title }}</h3>
         <div class="p-4 rounded-b-lg">
-          <div class="text-center">
+          <div class="text-center lg:col-span-2">
             <div class="text-lg">{{ cert.description }}</div>
           </div>
           <div class="text-center mt-4">
@@ -41,7 +41,7 @@
     [ngClass]="{'hidden':!showModal, 'block':!showModal}"
     class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 modal-overlay opacity-0"
   >
-    <div class="relative max-w-4xl w-full p-4 modal-content">
+    <div class="relative max-w-4xl w-full p-4 modal-content mx-auto">
       <button
         class="absolute top-2 right-2 text-white bg-gray-800 rounded-full p-2 hover:bg-gray-600 transition-colors"
         (click)="closeModal()"

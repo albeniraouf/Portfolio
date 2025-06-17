@@ -10,7 +10,11 @@ export interface Company {
 }
 export interface Experience {
   company: Company;
+  positions: Position[];
+}
+export interface Position {
   title: string;
+  type: string;
   startDate: Date;
   endDate?: Date;
   coreFunctionalities: string[];

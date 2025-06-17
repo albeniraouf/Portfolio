@@ -14,6 +14,8 @@ import {
   faSolidCakeCandles,
   faSolidCircleInfo,
   faSolidEnvelope,
+  faSolidFileFragment,
+  faSolidFileSignature,
   faSolidLanguage,
   faSolidLaptopCode,
   faSolidLocationDot,
@@ -58,7 +60,7 @@ import { NgxTypedWriterModule } from 'ngx-typed-writer';
       book: faSolidBookOpen,
       school: faSolidSchool,
       university: faSolidSchoolFlag,
-      
+      cert: faSolidFileSignature,
     }),
   ],
 })

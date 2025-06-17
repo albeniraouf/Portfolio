@@ -4,10 +4,9 @@
       <ng-icon name="laptop"></ng-icon> Experience
     </h1>
   </div>
-  <div
-    *ngFor="let experience of experiences"
-    class="my-6 p-4 bg-[#fffc] rounded-lg experience-card"
-  >
+  @for( experience of experiences; track $index){
+
+  <div class="my-6 p-4 bg-[#fffc] rounded-lg experience-card">
     <div class="text-center mb-4">
       <a
         *ngIf="!!experience.company.link"
@@ -45,38 +44,34 @@
       >
         {{ experience.company.name }}
       </h3>
+      <!-- <hr class="my-4 border-gray-200" /> -->
+      <p class=" text-gray-700 text-left leading-relaxed">
+        {{ experience.company.description }}
+      </p>
+      <hr class="my-4 border-gray-200" />
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+    @for(position of experience.positions; track $index){
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 pl-4">
       <div class="lg:col-span-2">
-        <div>
-          <b class="font-semibold">Job Title:</b> {{ experience.title }}
-          <br />
-          <b class="font-semibold">Location:</b>
-          {{ experience.company.location }}
+        <div class="">
+          <b class="font-semibold"> Job Title:</b> {{ position.title }}
           <br />
           <span class="text-sm text-gray-600">
-            {{ experience.startDate | ordinalDate }}
+            {{ position.startDate | ordinalDate }}
             -
             {{
-              !!experience.endDate
-                ? (experience.endDate | ordinalDate)
-                : "Present"
+              !!position.endDate ? (position.endDate | ordinalDate) : "Present"
             }}
           </span>
-          <span class="text-sm text-gray-600"
-            >({{ experience | duration }})</span
-          >
+          <br />
+          <span class="text-sm text-gray-600">({{ position | duration }})</span>
         </div>
-        <hr class="my-4 border-gray-200" />
-        <p class="text-gray-700 leading-relaxed">
-          {{ experience.company.description }}
-        </p>
       </div>
       <div class="lg:col-span-3">
         <h4 class="font-semibold mb-2">Core Functionalities:</h4>
         <div class="flex flex-wrap gap-2">
           <span
-            *ngFor="let function of experience.coreFunctionalities"
+            *ngFor="let function of position.coreFunctionalities"
             class="inline-block bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full"
           >
             {{ function }}
@@ -85,7 +80,7 @@
         <h4 class="font-semibold mt-4 mb-2">Technologies and Languages:</h4>
         <div class="flex flex-wrap gap-2">
           <span
-            *ngFor="let function of experience.technologiesAndLanguages"
+            *ngFor="let function of position.technologiesAndLanguages"
             class="inline-block bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full"
           >
             {{ function }}
@@ -93,5 +88,11 @@
         </div>
       </div>
     </div>
+  @if($index!==(experience.positions.length-1)){
+    <hr class="my-4 border-gray-200"/>
+  } 
+  }
   </div>
+  
+  }
 </app-card>
