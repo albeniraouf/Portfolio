@@ -103,8 +103,8 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
       this.meteors.push({
         x: (Math.random() * width) / 3,
         y: (Math.random() * height) / 3,
-        vx: Math.random() * 1 + 0.5,
-        vy: Math.random() * 1 + 0.5,
+        vx: Math.random() * 2 + 1.5,
+        vy: Math.random() * 2 + 1.5,
       });
 
       if (this.meteors.length > 10) {
@@ -117,9 +117,6 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
     const mwCtx = this.mwCtx;
 
     const mwClusterCount = 300; 
-    let mwClusterStarCount = 1500; 
-    let mwClusterSize = 120; 
-    let mwClusterSizeR = 80; 
     const mwClusterLayers = 10; 
     const mwHueMin = 150; 
     const mwHueMax = 300; 
@@ -127,8 +124,11 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
     const mwWhiteProportionMax = 65; 
     const outerHeight = window.outerHeight;
     const outerWidth = window.outerWidth;
+    let mwClusterStarCount = 2500; 
+    let mwClusterSize = 250; 
+    let mwClusterSizeR = 80; 
     if(outerHeight>outerWidth){
-      mwClusterSize = 60
+      mwClusterSize = 125; 
       mwClusterStarCount = 750; 
       mwClusterSizeR = 40
     }
@@ -182,11 +182,11 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
             2 *
               Math.sqrt(Math.pow(layerRadius, 2) - Math.pow(xPos - posX, 2)) *
               (Math.random() - 0.5);
-          let size = 0.05 + Math.random() * 0.15;
-          let alpha = 0.3 + Math.random() * 0.4;
+          let size = 0.1 + Math.random() * 0.15;
+          let alpha = 0.2 + Math.random() * 0.4;
           let whitePercentage =
             baseWhiteProportion +
-            15 +
+            10 +
             15 * distToCenter +
             Math.floor(Math.random() * 10);
           mwCtx.beginPath();
@@ -197,37 +197,6 @@ export class StarfieldComponent implements AfterViewInit, OnDestroy {
         }
       }
       
-      let gradient = mwCtx.createRadialGradient(
-        xPos,
-        yPos,
-        0,
-        xPos,
-        yPos,
-        size
-      );
-      gradient.addColorStop(
-        0,
-        'hsla(' + hue + ',100%,' + baseWhiteProportion + '%,0.002)'
-      ); 
-      gradient.addColorStop(
-        0.25,
-        'hsla(' +
-          hue +
-          ',100%,' +
-          (baseWhiteProportion + 30) +
-          '%,' +
-          (0.01 + 0.01 * distToCenter) +
-          ')'
-      ); 
-      gradient.addColorStop(
-        0.4,
-        'hsla(' + hue + ',100%,' + (baseWhiteProportion + 15) + '%,0.005)'
-      ); 
-      gradient.addColorStop(1, 'rgba(0,0,0,0)'); 
-      mwCtx.beginPath();
-      mwCtx.arc(xPos, yPos, size, 0, Math.PI * 2, false);
-      mwCtx.fillStyle = gradient;
-      mwCtx.fill();
     }
   }
   private draw() {
