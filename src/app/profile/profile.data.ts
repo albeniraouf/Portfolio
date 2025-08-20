@@ -5,40 +5,6 @@ export const profile: Profile = {
     {
       company: {
         location: 'New York',
-        name: 'KnockIQ 2',
-        link: 'https://knockiq.ai',
-        image: 'resources/experience/knockiq.png',
-        imageStyle: 'width: 40% !important; padding: 1rem;',
-        description: `KnockIQ is a pioneering technology company revolutionizing B2B lead generation through advanced artificial intelligence. By leveraging AI-driven insights and real-time engagement tools. KnockIQ empowers businesses to identify and connect with qualified leads.`,
-        showName: false,
-      },
-      positions: [
-        {
-          title: 'Software Developer',
-          type: 'Part-Time Remote',
-          startDate: new Date('2025-03-28'),
-          coreFunctionalities: ['Backend Development'],
-          technologiesAndLanguages: [
-            'Ubuntu',
-            'Linux',
-            'Git',
-            'JWT',
-            'Express',
-            'Prisma',
-            'PostgreSQL',
-            'Node',
-            'TypeScript',
-            'Mailgun',
-            'Jira',
-            'Confluence',
-            'ESLint',
-            'Automation Tests',
-            'Stripe',
-          ],
-        },]},
-    {
-      company: {
-        location: 'New York',
         name: 'KnockIQ',
         link: 'https://knockiq.ai',
         image: 'resources/experience/knockiq.png',

@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production --base-href \"https://albeniraouf.github.io/Portfolio/\"",
+    "build": "ng build --configuration production --base-href \"https://raoufalbeni.com/\"",
     "deploy": "npx angular-cli-ghpages --dir=dist/browser"
   },
   "private": true,
