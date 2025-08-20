@@ -19,18 +19,18 @@ export class AboutComponent implements AfterViewInit {
       duration: 2,
       ease: 'power2.out',
       scrollTrigger: {
-        trigger: '.about-me',
+        trigger: '.about-header',
         start: 'top 90%',
         toggleActions: 'play none none reset',
       },
     });
-    gsap.from('.about-me', {
+    gsap.from('.about-header', {
       opacity: 0,
       x: -50,
       duration: 1,
       ease: 'power2.out',
       scrollTrigger: {
-        trigger: '.about-me',
+        trigger: '.about-header',
         start: 'top 90%',
         toggleActions: 'play none none reset',
       },

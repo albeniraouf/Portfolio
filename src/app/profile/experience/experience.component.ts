@@ -18,7 +18,7 @@ export class ExperienceComponent implements AfterViewInit {
       duration: 2,
       ease: 'power2.out',
       scrollTrigger: {
-        trigger: '.about-me',
+        trigger: '.experience-header',
         start: 'top 90%',
         toggleActions: 'play none none reset',
       },

@@ -4,7 +4,39 @@ export const profile: Profile = {
   experiences: [
     {
       company: {
-        location: 'New York',
+        location: 'As Suwayda, Syria',
+        name: 'Lumina Team',
+        link: 'https://lumina-team.org',
+        image: 'resources/experience/lumina.png',
+        imageStyle: 'width: 15% !important; padding: 1rem 1rem 0.5rem 1rem;',
+        description: 'Lumina Team is a humanitarian initiative born from the hearts of the people of Suwayda Governorate, aiming to support those affected and bring smiles back to their faces. We work together as a team to provide assistance through diverse initiatives that promote community solidarity.',
+        showName: true,
+      },
+      positions: [
+        {
+          title: 'Chief Technology Officer',
+          type: 'Volunteer',
+          startDate: new Date('2025-08-01'),
+          coreFunctionalities: ['Software Development', 'Management'],
+          technologiesAndLanguages: [
+            'Git',
+            'JWT',
+            'Express',
+            'TypeORM',
+            'PostgreSQL',
+            'Node',
+            'TypeScript',
+            'ESLint',
+            'React',
+            'MVC'
+          ],
+
+        }
+      ]
+    },
+    {
+      company: {
+        location: 'New York, USA',
         name: 'KnockIQ',
         link: 'https://knockiq.ai',
         image: 'resources/experience/knockiq.png',
@@ -40,7 +72,7 @@ export const profile: Profile = {
     },
     {
       company: {
-        location: 'Dubai',
+        location: 'Dubai, UAE',
         name: 'Socienta',
         link: 'https://socienta.com',
         image: 'resources/experience/socienta.png',
@@ -228,7 +260,7 @@ export const profile: Profile = {
         icon: 'instagram',
       },
     ],
-    whoAmI: `I'm currently pursuing a degree in Information Engineering and working as a Full-Stack Software Developer and Team Leader, with a strong focus on web development.<br><br>I'm highly passionate about technology, a fast learner, capable of multitasking effectively, and committed to delivering high-quality work.`,
+    whoAmI: `I am a dedicated Information Engineering student and an accomplished Full-Stack Software Developer, leading a high-performing team with a focus on cutting-edge web development solutions. With extensive experience in delivering robust, scalable applications, I excel in architecting end-to-end systems that drive innovation and efficiency.<br><br>My passion for technology fuels my ability to rapidly adapt to new challenges, master emerging tools, and deliver superior results under pressure. I am committed to pushing boundaries, fostering collaboration, and consistently producing high-quality, impactful work.`,
     emails: ['raouf.albeni@gmail.com', 'raouf.albeni@yahoo.com'],
     phones: ['+963 949 294 811', '+963 981 241 453'],
   },

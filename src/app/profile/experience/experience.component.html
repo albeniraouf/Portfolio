@@ -30,22 +30,22 @@
         </h3>
       </a>
       <img
-        *ngIf="experience.company.image && !experience.company.link"
+        *ngIf="!experience.company.link && experience.company.image"
         [src]="experience.company.image"
         [style]="experience.company.imageStyle"
         class="mx-auto"
       />
       <h3
         *ngIf="
-          experience.company.showName ||
-          (!experience.company.image && !experience.company.link)
+          !experience.company.link &&
+          (experience.company.showName || !experience.company.image)
         "
         class="text-xl font-semibold mt-2"
       >
         {{ experience.company.name }}
       </h3>
       <!-- <hr class="my-4 border-gray-200" /> -->
-      <p class=" text-gray-700 text-left leading-relaxed">
+      <p class="text-gray-700 text-left leading-relaxed">
         {{ experience.company.description }}
       </p>
       <hr class="my-4 border-gray-200" />
@@ -54,7 +54,9 @@
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-6 pl-4">
       <div class="lg:col-span-2">
         <div class="">
-          <b class="font-semibold"> Job Title:</b> {{ position.title }}
+          <b class="font-semibold"> Title:</b> {{ position.title }}
+          <br />
+          <b class="font-semibold"> Type:</b> {{position.type}}
           <br />
           <span class="text-sm text-gray-600">
             {{ position.startDate | ordinalDate }}
@@ -88,11 +90,10 @@
         </div>
       </div>
     </div>
-  @if($index!==(experience.positions.length-1)){
-    <hr class="my-4 border-gray-200"/>
-  } 
-  }
+    @if($index!==(experience.positions.length-1)){
+    <hr class="my-4 border-gray-200" />
+    } }
   </div>
-  
+
   }
 </app-card>
