@@ -138,7 +138,7 @@ export const profile: Profile = {
         imageStyle:
           'width: unset !important; height: 12rem !important; filter:invert(1);',
         description:
-          'Code Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Tishreen University.',
+          'Code Library is focused on preparing high quality and precise lectures for the Faculty of Informatics Engineering at Latakia University.',
         showName: false,
       },
       positions: [
