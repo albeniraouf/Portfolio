@@ -4,15 +4,12 @@
       <ng-icon name="laptop"></ng-icon> Experience
     </h1>
   </div>
-  @for( experience of experiences; track $index){
 
+  @for( experience of experiences; track $index){
   <div class="my-6 p-4 bg-[#fffc] rounded-lg experience-card">
     <div class="text-center mb-4">
-      <a
-        *ngIf="!!experience.company.link"
-        [href]="experience.company.link"
-        target="_blank"
-      >
+      @if(!!experience.company.link){
+      <a [href]="experience.company.link" target="_blank">
         <img
           *ngIf="experience.company.image"
           [src]="experience.company.image"
@@ -29,21 +26,17 @@
           {{ experience.company.name }}
         </h3>
       </a>
+      } @else {
       <img
-        *ngIf="!experience.company.link && experience.company.image"
         [src]="experience.company.image"
         [style]="experience.company.imageStyle"
         class="mx-auto"
       />
-      <h3
-        *ngIf="
-          !experience.company.link &&
-          (experience.company.showName || !experience.company.image)
-        "
-        class="text-xl font-semibold mt-2"
-      >
+      <h3 class="text-xl font-semibold mt-2">
         {{ experience.company.name }}
       </h3>
+      }
+
       <!-- <hr class="my-4 border-gray-200" /> -->
       <p class="text-gray-700 text-left leading-relaxed">
         {{ experience.company.description }}
@@ -56,7 +49,7 @@
         <div class="">
           <b class="font-semibold"> Title:</b> {{ position.title }}
           <br />
-          <b class="font-semibold"> Type:</b> {{position.type}}
+          <b class="font-semibold"> Type:</b> {{ position.type }}
           <br />
           <span class="text-sm text-gray-600">
             {{ position.startDate | ordinalDate }}
